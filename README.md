@@ -3,7 +3,7 @@
 This is a fork of ti99sim 0.16.0 from 
 [https://mrousseau.org/programs/ti99sim/](https://mrousseau.org/programs/ti99sim/).
 
-Many thanks for Mark Rousseau for the monumental effort of creating this
+Many thanks for Marc Rousseau for the monumental effort of creating this
 awesome emulator!  This is a quality software package, with highly portable
 open source code, written in a mainstream compiled language.  It should
 work well on any operating system well into the future with minimal
