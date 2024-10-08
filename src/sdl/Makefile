@@ -43,6 +43,6 @@ $(BINDIR):
 	mkdir -p $@
 
 $(TARGET): $(OBJS) $(LIBS)
-	$(CXX) -o $@ $(LFLAGS) $^ $(XLIBS)
+	$(CXX) -o $@ $(LDFLAGS) $^ $(XLIBS)
 
 -include $(FILES:%.cpp=$(CFG)/%.dep)

@@ -33,6 +33,6 @@ $(BINDIR):
 	mkdir -p $@
 
 $(BINDIR)/ti99sim-console: $(OBJS) $(LIBS)
-	$(CXX) -o $@ $(LFLAGS) $^ $(XLIBS)
+	$(CXX) -o $@ $(LDFLAGS) $^ $(XLIBS)
 
 -include $(FILES:%.cpp=$(CFG)/%.dep)

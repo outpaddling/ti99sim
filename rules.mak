@@ -18,8 +18,8 @@ CFLAGS   += -fdata-sections -ffunction-sections
 CFLAGS   += -funsigned-char
 CFLAGS   += -Wno-deprecated-declarations
 
-LFLAGS   += -Wl,--gc-sections
-LFLAGS   += -rdynamic
+LDFLAGS  += -Wl,--gc-sections
+LDFLAGS  += -rdynamic
 
 # This is redundant, defined in rules.mk
 # XLIBS    += -lstdc++fs
@@ -45,14 +45,14 @@ endif
 
 ifdef LTO
 CFLAGS   += -flto
-LFLAGS   += -flto
+LDFLAGS  += -flto
 endif
 
 ifdef DEBUG
 CFLAGS   += -g3 -O0 -DDEBUG
 else
 CFLAGS   += -g3 -O3 -fomit-frame-pointer
-LFLAGS   += -g3 -O3
+LDFLAGS  += -g3 -O3
 endif
 
 ifdef LOGGER
