@@ -31,6 +31,7 @@
 #include <cstdio>
 #include <iomanip>
 #include <fstream>
+#include <sstream>
 #include "common.hpp"
 #include "logger.hpp"
 #include "stateobject.hpp"

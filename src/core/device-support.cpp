@@ -27,6 +27,7 @@
 //----------------------------------------------------------------------------
 
 #include <regex>
+#include <cstring>
 #include "idevice.hpp"
 #include "icomputer.hpp"
 #include "cartridge.hpp"
