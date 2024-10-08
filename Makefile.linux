@@ -48,6 +48,7 @@ install: ti99sim
 	@$(INSTALL) -d $(DATA_DIR)/disks
 	@$(INSTALL) -d $(DATA_DIR)/roms
 	@$(INSTALL) -d $(BIN_DIR)
+	@$(INSTALL) -d $(SYS_BIN)
 	@for target in $(ITARGETS); do \
 	   $(INSTALL) -s $$target $(BIN_DIR); \
 	 done

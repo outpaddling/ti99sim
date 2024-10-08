@@ -71,14 +71,18 @@ OSTYPE   := $(shell uname -s)
 endif
 
 ifeq ($(OSTYPE),Linux)
-OS       := OS_LINUX
+OS       := OS_UNIX
 ifneq (,$(findstring /,$(shell whereis ccache)))
 CXX      := ccache $(CXX)
 endif
 endif
 
 ifeq ($(OSTYPE),FreeBSD)
-OS       := OS_LINUX
+OS       := OS_UNIX
+endif
+
+ifeq ($(OSTYPE),NetBSD)
+OS       := OS_UNIX
 endif
 
 ifeq ($(OSTYPE),Darwin)

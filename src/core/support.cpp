@@ -65,7 +65,7 @@ std::filesystem::path GetCommonPath( )
 
 			common = TI_DATA_DIR;
 
-		#elif defined( OS_LINUX ) || defined( OS_MACOSX )
+		#elif defined( OS_UNIX ) || defined( OS_MACOSX )
 
 			static const char *self[] =
 			{
@@ -416,7 +416,7 @@ std::string sha1( const void *data, size_t length )
 	return sha1.Digest( );
 }
 
-#if defined( OS_LINUX )
+#if defined( OS_UNIX )
 
 	#include <openssl/sha.h>
 

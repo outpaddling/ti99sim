@@ -1055,7 +1055,7 @@ bool FindFile( char *filename )
 	}
 #endif
 
-#if defined( OS_LINUX ) || defined( OS_MACOSX )
+#if defined( OS_UNIX ) || defined( OS_MACOSX )
 	DIR *dir = opendir( "." );
 	dirent *dp = readdir( dir );
 	while( dp != nullptr )

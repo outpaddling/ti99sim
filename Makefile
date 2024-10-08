@@ -8,7 +8,7 @@ ifeq ($(OS),OS_WIN32)
 include Makefile.win32
 endif
 
-ifeq ($(OS),OS_LINUX)
+ifeq ($(OS),OS_UNIX)
 include Makefile.linux
 endif
 

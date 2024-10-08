@@ -48,7 +48,7 @@
 	#include <conio.h>
 #elif defined ( OS_WINDOWS )
 	#include <conio.h>
-#elif defined ( OS_LINUX )
+#elif defined ( OS_UNIX )
 	#include <unistd.h>
 #endif
 
@@ -748,7 +748,7 @@ int main( int argc, char *argv[] )
 		return 0;
 	}
 
-	#if defined ( OS_LINUX )
+	#if defined ( OS_UNIX )
 		if( isatty( fileno( stdout )))
 		{
 			printf( "TI-99/4A Diskette Viewer\n" );

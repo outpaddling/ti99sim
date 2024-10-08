@@ -2,7 +2,7 @@
 
 include ../../rules.mak
 
-ifeq ($(OS),OS_LINUX)
+ifeq ($(OS),OS_UNIX)
 CFLAGS	+= `sdl2-config --cflags | sed 's|-I/|-isystem/|g'`
 XLIBS	+= `sdl2-config --libs`
 endif

@@ -26,7 +26,7 @@
 //
 //----------------------------------------------------------------------------
 
-#if defined( OS_LINUX ) || defined( OS_MACOSX )
+#if defined( OS_UNIX ) || defined( OS_MACOSX )
 	#include <signal.h>
 	#include <stdarg.h>
 	#include <cstdio>
@@ -108,7 +108,7 @@ static size_t curY = 0;
 		curX += length;
 	}
 
-#elif defined( OS_LINUX ) || defined( OS_MACOSX )
+#elif defined( OS_UNIX ) || defined( OS_MACOSX )
 
 	static FILE *console;
 	static termios stored;

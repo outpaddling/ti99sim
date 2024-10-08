@@ -35,14 +35,11 @@
 		#define OS_WINDOWS
 	#endif
 
-// FIXME: __GNUC__ is defined under clang as well, but using OS_LINUX
-// for all Unix variants encourages developers to assume linuxisms
-// where they won't work.  Maybe define OS_UNIX for portable code
-// and just use OS_LINUX for linux-specific code.
+// FIXME: __GNUC__ is defined under clang as well, but this is misleading
 #elif defined( __GNUC__ )
 
-	#if ! defined( OS_LINUX )
-		#define OS_LINUX
+	#if ! defined( OS_UNIX )
+		#define OS_UNIX
 	#endif
 
 	#define GCC_VERSION ( __GNUC__ * 10000 + __GNUC_MINOR__ * 100 + __GNUC_PATCHLEVEL__ )
