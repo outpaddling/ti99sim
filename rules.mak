@@ -75,6 +75,7 @@ OS       := OS_UNIX
 ifneq (,$(findstring /,$(shell whereis ccache)))
 CXX      := ccache $(CXX)
 endif
+XLIBS	 += -lstdc++fs
 endif
 
 ifeq ($(OSTYPE),FreeBSD)
