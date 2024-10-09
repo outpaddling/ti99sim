@@ -14,7 +14,7 @@ XLIBS	+= -lobjc -framework Cocoa
 SDLLIBS	:= SDLMain.o
 endif
 
-XLIBS	+= -lrt -lpthread
+XLIBS	+= -lpthread
 XLIBS	+= `pkg-config --libs openssl`
 
 FILES	+= catalog.cpp

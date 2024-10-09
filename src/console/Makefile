@@ -15,7 +15,7 @@ BINDIR	:= ../../bin
 TARGET	:= $(BINDIR)/ti99sim-console
 
 ifdef DEBUG
-XLIBS	+= -Wl,-rpath,/usr/lib -lpthread -lrt
+XLIBS	+= -Wl,-rpath,/usr/lib -lpthread
 endif
 
 XLIBS	+= `pkg-config --libs openssl`

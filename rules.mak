@@ -18,7 +18,6 @@ CFLAGS   += -fdata-sections -ffunction-sections
 CFLAGS   += -funsigned-char
 CFLAGS   += -Wno-deprecated-declarations
 
-LDFLAGS  += -Wl,--gc-sections
 LDFLAGS  += -rdynamic
 
 # This is redundant, defined in rules.mk
@@ -26,7 +25,6 @@ LDFLAGS  += -rdynamic
 
 WARNINGS := -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 WARNINGS += -Wno-implicit-fallthrough
-WARNINGS += -Wno-uninitialized
 WARNINGS += -Wcast-qual
 
 INCLUDES := -I../../include
@@ -57,7 +55,6 @@ endif
 
 ifdef LOGGER
 CFLAGS   += -D_REENTRANT -DLOGGER
-LIBS     += -lrt
 ifdef DEBUG
 CFLAGS   += -DDEBUG_LOGGER
 endif
@@ -89,6 +86,11 @@ endif
 ifeq ($(OSTYPE),Darwin)
 CXX      := c++
 OS       := OS_MACOSX
+else
+LDFLAGS  += -Wl,--gc-sections
+ifdef LOGGER
+LIBS     += -lrt
+endif
 endif
 
 ifeq ($(OSTYPE),CYGWIN_NT-5.1)

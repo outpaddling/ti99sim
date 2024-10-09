@@ -8,12 +8,11 @@ XLIBS	+= `sdl2-config --libs`
 endif
 
 XLIBS	+= -lpthread
-XLIBS	+= -lrt
 XLIBS	+= `pkg-config --libs openssl`
 
 ifeq ($(OS),OS_MACOSX)
-CFLAGS	+= -I ~/Library/Frameworks/SDL.framework/Headers
-XLIBS	+= -F ~/Library/Frameworks -framework SDL
+CFLAGS	+= -I /Library/Frameworks/SDL2.framework/Headers
+XLIBS	+= -F /Library/Frameworks -framework SDL2
 XLIBS	+= -lobjc -framework Cocoa
 OBJS	+= $(CFG)/SDLMain.o
 endif
