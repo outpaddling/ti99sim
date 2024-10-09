@@ -704,7 +704,7 @@ int main( int argc, char *argv[] )
 	int maxSize      = totalSectors * DEFAULT_SECTOR_SIZE;
 	UINT8 *fileBuffer = new UINT8[ maxSize ];
 	int size = 0;
-	for( int i = 0;; i++ )
+	while ( true )
 	{
 		int count = file->ReadRecord( fileBuffer + size, DEFAULT_SECTOR_SIZE );
 		if( count <= 0 )

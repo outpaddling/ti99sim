@@ -277,11 +277,11 @@ void PrintDiskLayout( cDiskMedia *media )
 				}
 				lastFormat = track->GetFormat( );
 			}
-			int noSectors = 0;
+			// int noSectors = 0;
 			for( auto &sector : track->GetSectors( ))
 			{
 				printf( " %d", sector->LogicalSector( ));
-				noSectors++;
+				// noSectors++;
 			}
 			printf( "\n" );
 			for( auto &sector : track->GetSectors( ))
