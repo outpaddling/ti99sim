@@ -114,7 +114,7 @@ template <typename T, size_t N> char( &ArraySizeHelper( T(&array) [N] )) [N];
 #else
 
 	// Use the environments endian definitions
-	#ifdef OS_MACOSX
+	#ifdef OS_MACOS
 	#include <machine/endian.h>
 	#else
 	#include <endian.h>

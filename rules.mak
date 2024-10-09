@@ -85,7 +85,7 @@ endif
 
 ifeq ($(OSTYPE),Darwin)
 CXX      := c++
-OS       := OS_MACOSX
+OS       := OS_MACOS
 else
 LDFLAGS  += -Wl,--gc-sections
 ifdef LOGGER

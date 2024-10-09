@@ -65,7 +65,7 @@ std::filesystem::path GetCommonPath( )
 
 			common = TI_DATA_DIR;
 
-		#elif defined( OS_UNIX ) || defined( OS_MACOSX )
+		#elif defined( OS_UNIX ) || defined( OS_MACOS )
 
 			static const char *self[] =
 			{

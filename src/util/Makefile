@@ -7,7 +7,7 @@ CFLAGS	+= `sdl2-config --cflags | sed 's|-I/|-isystem/|g'`
 XLIBS	+= `sdl2-config --libs`
 endif
 
-ifeq ($(OS),OS_MACOSX)
+ifeq ($(OS),OS_MACOS)
 CFLAGS	+= -I ~/Library/Frameworks/SDL.framework/Headers
 XLIBS	+= -F ~/Library/Frameworks -framework SDL
 XLIBS	+= -lobjc -framework Cocoa

@@ -10,7 +10,7 @@ endif
 XLIBS	+= -lpthread
 XLIBS	+= `pkg-config --libs openssl`
 
-ifeq ($(OS),OS_MACOSX)
+ifeq ($(OS),OS_MACOS)
 CFLAGS	+= -I /Library/Frameworks/SDL2.framework/Headers
 XLIBS	+= -F /Library/Frameworks -framework SDL2
 XLIBS	+= -lobjc -framework Cocoa

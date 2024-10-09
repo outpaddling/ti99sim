@@ -12,6 +12,6 @@ ifeq ($(OS),OS_UNIX)
 include Makefile.unix
 endif
 
-ifeq ($(OS),OS_MACOSX)
+ifeq ($(OS),OS_MACOS)
 include Makefile.macosx
 endif
