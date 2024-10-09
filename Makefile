@@ -9,7 +9,7 @@ include Makefile.win32
 endif
 
 ifeq ($(OS),OS_UNIX)
-include Makefile.linux
+include Makefile.unix
 endif
 
 ifeq ($(OS),OS_MACOSX)
